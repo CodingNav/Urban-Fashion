@@ -90,7 +90,7 @@ nav ul li a {
 
 .arrow-icons {
     margin-top: 40px;
-    display: flex;
+    /* display: flex; */
 }
 
 .arrow-icons img {
