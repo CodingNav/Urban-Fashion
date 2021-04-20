@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
@@ -10,10 +10,10 @@
     /* background-position: center; */
     background-size: cover;
     padding-left: 5%;
-    padding-right: 5%; 
+    padding-right: 5%;
     box-sizing: border-box;
     position: relative;
-} 
+}
 
 .navbar {
     width: 100%;
@@ -21,9 +21,11 @@
     margin: auto;
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .logo {
+    margin-right: auto;
     width: 160px;
     cursor: pointer;
 }
@@ -42,6 +44,10 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #333;
+}
+
+.fas.fa-bars {
+    display: none;
 }
 
 .content h1 {
@@ -63,14 +69,19 @@ nav ul li a {
 }
 
 .content .btn {
- display: inline-block;
- background: linear-gradient( 45deg, #87adfe, #ff77cd);
- border-radius: 6px;
- padding: 10px 20px;
- box-sizing: border-box;
- text-decoration: none;
- color: #fff;
- box-shadow: 3px 8x 22px rgba(94,28,68,0.15);
+    display: inline-block;
+    background: linear-gradient( 45deg, #87adfe, #ff77cd);
+    border-radius: 6px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: #fff;
+    box-shadow: 3px 8x 22px rgba(94, 28, 68, 0.15);
+}
+
+.main-content {
+    position: relative;
+    z-index: 2;
 }
 
 .arrow-icons {
@@ -78,14 +89,15 @@ nav ul li a {
     display: flex;
 }
 
-.arrow {
+.arrow-icons img {
     width: 40px;
     margin-right: 25px;
 }
 
 .feature-img {
-    height: 90%;
+    width: 55%;
     position: absolute;
+    z-index: 0;
     bottom: 0;
     right: 160px;
 }
@@ -102,4 +114,40 @@ nav ul li a {
     color: #6a7199;
     padding-right: 20px;
     font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .fas.fa-bars {
+        display: inline;
+    }
+    nav {
+        display: none;
+    }
+    .cart {
+        position: inherit;
+    }
+    .feature-img {
+        width: 70%;
+        right: 0px;
+    }
+}
+
+@media (max-width: 576px) {
+    .content h1 {
+        font-size: 40px;
+    }
+    .feature-img {
+        width: 80%;
+        bottom: 50px;
+    }
+    .social-links {
+        padding-bottom: 20px;
+        padding-top: 40px;
+        background-color: #c9d1fc;
+        transform: none;
+        text-align: center;
+        left: 0;
+        bottom: 0px;
+        width: 100%;
+    }
 }
